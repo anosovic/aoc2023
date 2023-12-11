@@ -1,0 +1,1 @@
+open("day01/input.txt")
