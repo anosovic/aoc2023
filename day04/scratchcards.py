@@ -96,6 +96,8 @@ def precedents():
 
 @cache
 def howmanyof(i):
+    if i not in card_wins_dict():
+        return 0
     print(f"{i} has precedents {precedents()[i]} ")
     return 1 + sum(
         howmanyof(p)
@@ -109,6 +111,7 @@ def parttwo():
     )
 
 
+print(cards[62])
 # print(howmanyof(33))
 # print(parttwo())
 
